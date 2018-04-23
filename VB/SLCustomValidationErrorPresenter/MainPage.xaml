@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="SLCustomValidationErrorPresenter.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             >
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/SLCustomValidationErrorPresenter;component/Themes/EditorsCustomTemplates.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel Orientation="Horizontal" Margin="5,7">
+        <StackPanel>
+            <TextBlock Text="TextEdit:" Margin="5,0"/>
+            <dxe:TextEdit Name="TextEdit" TabIndex="0" Text="123456" Validate="textEdit_Validate" InvalidValueBehavior="AllowLeaveEditor" HorizontalAlignment="Left" Width="200"/>
+            <StackPanel Orientation="Horizontal" Height="15">
+                <TextBlock Text="Error type: " Visibility="{Binding ElementName=TextEdit, Path=HasValidationError, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                <TextBlock Text="{Binding ElementName=TextEdit, Path=ValidationError.ErrorType}"/>
+            </StackPanel>
+
+            <TextBlock Text="PasswordBoxEdit:" Margin="5,10,0,0" />
+            <dxe:PasswordBoxEdit Name="passwordBoxEdit1" Validate="textEdit_Validate" InvalidValueBehavior="AllowLeaveEditor" HorizontalAlignment="Left" Width="200"/>
+
+            <TextBlock Text="ButtonEdit:" Margin="5,10,0,0" />
+            <dxe:ButtonEdit Validate="textEdit_Validate" InvalidValueBehavior="AllowLeaveEditor" Name="buttonEdit1" HorizontalAlignment="Left" Width="200"/>
+
+            <TextBlock Text="ComboBoxEdit:" Margin="5,10,0,0" />
+            <dxe:ComboBoxEdit Validate="textEdit_Validate" InvalidValueBehavior="AllowLeaveEditor" HorizontalAlignment="Left" Width="200">
+            </dxe:ComboBoxEdit>
+
+            <TextBlock Text="SpinEdit:" Margin="5,10,0,0" />
+            <dxe:SpinEdit Name="spinEdit1" Validate="textEdit_Validate" InvalidValueBehavior="AllowLeaveEditor" HorizontalAlignment="Left" Width="200" />
+
+            <TextBlock Text="PopupCalcEdit:" Margin="5,10,0,0" />
+            <dxe:PopupCalcEdit Name="popupCalcEdit1" Validate="textEdit_Validate" InvalidValueBehavior="AllowLeaveEditor" HorizontalAlignment="Left" Width="200" />
+
+            <TextBlock Text="LookUpEdit:" Margin="5,10,0,0" />
+            <dxg:LookUpEdit Name="lookUpEdit1" ValidateOnTextInput="True" Validate="textEdit_Validate" InvalidValueBehavior="AllowLeaveEditor" HorizontalAlignment="Left" Width="200" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>
