@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [MainPage.xaml](./CS/SLCustomValidationErrorPresenter/MainPage.xaml) (VB: [MainPage.xaml](./VB/SLCustomValidationErrorPresenter/MainPage.xaml))
-* [MainPage.xaml.cs](./CS/SLCustomValidationErrorPresenter/MainPage.xaml.cs) (VB: [MainPage.xaml](./VB/SLCustomValidationErrorPresenter/MainPage.xaml))
+* [MainPage.xaml.cs](./CS/SLCustomValidationErrorPresenter/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/SLCustomValidationErrorPresenter/MainPage.xaml.vb))
 * [EditorsCustomTemplates.xaml](./CS/SLCustomValidationErrorPresenter/Themes/EditorsCustomTemplates.xaml) (VB: [EditorsCustomTemplates.xaml](./VB/SLCustomValidationErrorPresenter/Themes/EditorsCustomTemplates.xaml))
 * [ValidationErrorTypeToBrushConverter.cs](./CS/SLCustomValidationErrorPresenter/ValidationErrorTypeToBrushConverter.cs) (VB: [ValidationErrorTypeToBrushConverter.vb](./VB/SLCustomValidationErrorPresenter/ValidationErrorTypeToBrushConverter.vb))
 <!-- default file list end -->
